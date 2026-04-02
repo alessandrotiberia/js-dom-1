@@ -7,7 +7,7 @@ Al click del bottone, la lampadina dovrà accendersi
 (dovremo quindi utilizzare l’immagine della lampadina accesa, sempre in allegato)
  */
 
- /*BONUS
+/*BONUS
 
 Facciamo accendi e spegni:
 
@@ -17,11 +17,11 @@ Al secondo click la lampadina si spegne e nel bottone compare la scritta "Accend
 const elemento = document.querySelector("#mio-id-element"); //variabile con id element
 
 const bottone = document.querySelector("#mio-bottone"); //variabile con id bottone
- 
+
 console.log("luce spenta"); // qui la luce è spenta 
 
 function luce_accesa() {
-     console.log("luce accesa"); // quando si effettua il click entra nella function e si accende
+    console.log("luce accesa"); // quando si effettua il click entra nella function e si accende
     elemento.src = "./img/yellow_lamp.png"; // prendo src e cambio da spento ad acceso 
     elemento.alt = "lampadina accesa"; // modifico anche alt di img
     bottone.innerHTML = "spegni"; // quando si accende la lampadina il bottone va su spegni
@@ -43,3 +43,18 @@ A quel punto, il JavaScript va a prendere il tag <img> e modifica al volo la scr
 
 
 
+// VERSIONE BONUS ACCENDI SPEGNI
+/*
+function accendi_spegni() {
+    if (bottone === "accendi") {
+        elemento.src = "./img/yellow_lamp.png";
+        elemento.alt = "lampadina accesa";
+        bottone.innerHTML = "spegni";
+    } else {
+        elemento.src = "./img/white_lamp.png";
+        elemento.alt = "lampadina spenta";
+        bottone.innerHTML = "accendi"
+    }
+}
+
+bottone.addEventListener('click', accendi_spegni);*/
